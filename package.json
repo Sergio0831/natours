@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.comp.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sergio0831/natours.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sergio0831/natours/issues"
+  },
+  "homepage": "https://github.com/Sergio0831/natours#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
