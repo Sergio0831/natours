@@ -1,0 +1,58 @@
+@use "../abstracts/variables" as *;
+
+.btn {
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        display: inline-block;
+        border: 0.1rem solid $color-white;
+        border-radius: 10rem;
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s;
+    }
+
+    &:link,
+    &:visited {
+        position: relative;
+        display: inline-block;
+        border-radius: 10rem;
+        padding: 1.5rem 4rem;
+        font-size: 1.6rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        transform: translateY(-0.3rem);
+
+        &::after {
+            opacity: 0;
+            transform: scale(1.4, 1.6);
+        }
+    }
+
+    &:active {
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+        transform: translateY(-0.1rem);
+    }
+
+    &--white {
+        color: $color-grey-dark;
+        background-color: $color-white;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--animated {
+        animation: moveInBottom 0.5s ease-out 0.3s;
+        animation-fill-mode: backwards;
+    }
+}
