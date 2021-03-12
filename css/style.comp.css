@@ -369,6 +369,75 @@ body {
   transform: rotateY(0);
 }
 
+.story {
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 8.5rem;
+  width: 75%;
+  font-size: 1.6rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: skew(-12deg);
+}
+.story__shape {
+  position: relative;
+  float: left;
+  clip-path: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  width: 15rem;
+  height: 15rem;
+  transform: translateX(-2.5rem) skew(12deg);
+}
+.story__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.3);
+  transition: all 0.2s;
+}
+.story__text {
+  transform: skew(12deg);
+}
+.story__caption {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.7rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  backface-visibility: hidden;
+  transform: translate(-50%, 10%);
+  transition: all 0.2s;
+}
+.story:hover .story__caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.story:hover .story__img {
+  filter: blur(3px) brightness(80%);
+  transform: scale(1);
+}
+
+.bg-video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+.bg-video__content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .header {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -440,6 +509,11 @@ body {
 
 .section-tours {
   margin-top: -10rem;
-  padding: 25rem 0 50rem;
+  padding: 25rem 0 5rem;
   background-color: #f7f7f7;
+}
+
+.section-stories {
+  position: relative;
+  padding: 15rem 0;
 }
