@@ -15,16 +15,26 @@
 		transition: all 0.4s;
 	}
 
+	&,
 	&:link,
 	&:visited {
 		position: relative;
 		display: inline-block;
+		border: none;
 		border-radius: 10rem;
 		padding: 1.5rem 4rem;
 		font-size: $default-font-size;
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: all 0.2s;
+		cursor: pointer;
+	}
+
+	&:focus,
+	&:active {
+		outline: none;
+		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+		transform: translateY(-0.1rem);
 	}
 
 	&:hover {
@@ -35,11 +45,6 @@
 			opacity: 0;
 			transform: scale(1.4, 1.6);
 		}
-	}
-
-	&:active {
-		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-		transform: translateY(-0.1rem);
 	}
 
 	&--white {
