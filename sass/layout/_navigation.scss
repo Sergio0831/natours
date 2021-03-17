@@ -21,6 +21,11 @@
 		height: 7rem;
 		background-color: $color-white;
 		cursor: pointer;
+
+		@include respond(tab-port) {
+			right: 3rem;
+			top: 3rem;
+		}
 	}
 
 	&__background {
@@ -36,6 +41,11 @@
 			$color-primary-dark
 		);
 		transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+
+		@include respond(tab-port) {
+			right: 3.5rem;
+			top: 3.5rem;
+		}
 	}
 
 	&__nav {
@@ -133,10 +143,14 @@
 	}
 
 	&__checkbox:checked + &__button &__icon::before {
-		transform: rotate(135deg) translate(7px, -6px);
+		transform: rotate(135deg) translate(6px, -5px);
+
+		@include respond(tab-port) {
+			transform: rotate(135deg) translate(5px, -4px);
+		}
 	}
 
 	&__checkbox:checked + &__button &__icon::after {
-		transform: rotate(-135deg) translate(7px, 7px);
+		transform: rotate(-135deg) translate(6px, 6px);
 	}
 }
