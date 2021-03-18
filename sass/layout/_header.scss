@@ -32,7 +32,11 @@
 		transform: translate(-50%, -50%);
 	}
 
-	@include respond(phone) {
+	@include respond(tab-port) {
 		clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+	}
+
+	@include respond(phone) {
+		clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
 	}
 }

@@ -143,7 +143,7 @@
 	}
 
 	&__checkbox:checked + &__button &__icon::before {
-		transform: rotate(135deg) translate(6px, -5px);
+		transform: rotate(135deg) translate(5px, -5px);
 
 		@include respond(tab-port) {
 			transform: rotate(135deg) translate(5px, -4px);
@@ -151,6 +151,10 @@
 	}
 
 	&__checkbox:checked + &__button &__icon::after {
-		transform: rotate(-135deg) translate(6px, 6px);
+		transform: rotate(-135deg) translate(7px, 7px);
+
+		@include respond(tab-port) {
+			transform: rotate(-135deg) translate(6px, 6px);
+		}
 	}
 }

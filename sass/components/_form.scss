@@ -37,6 +37,10 @@
 		&:focus:invalid {
 			border-bottom: 3px solid $color-secondary-dark;
 		}
+
+		@include respond(tab-port) {
+			width: 100%;
+		}
 	}
 
 	&__label {
@@ -46,11 +50,21 @@
 		font-weight: 700;
 		font-size: 1.2rem;
 		transition: $transition;
+
+		@include respond(tab-port) {
+			text-align: left;
+		}
 	}
 
 	&__radio-group {
 		display: inline-block;
 		width: 49%;
+
+		@include respond(tab-port) {
+			display: flex;
+			margin-bottom: 1rem;
+			width: 100%;
+		}
 	}
 
 	&__radio-input {
@@ -87,6 +101,10 @@
 			transform: translate(-50%, -50%);
 			transition: $transition;
 		}
+
+		@include respond(tab-port) {
+			top: -2px;
+		}
 	}
 
 	&__input:placeholder-shown + &__label {
@@ -97,5 +115,9 @@
 
 	&__radio-input:checked + &__radio-label &__radio-button::after {
 		opacity: 1;
+	}
+
+	@include respond(tab-port) {
+		text-align: center;
 	}
 }
