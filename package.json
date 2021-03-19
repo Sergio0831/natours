@@ -21,6 +21,8 @@
     "node-sass": "^5.0.0"
   },
   "dependencies": {
+    "imagemin": "^7.0.1",
+    "imagemin-webp": "^6.0.0",
     "node-w3c-validator": "^2.0.1",
     "stylelint": "^13.12.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
