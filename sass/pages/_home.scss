@@ -20,7 +20,7 @@
 			rgba($color-primary-light, 0.8),
 			rgba($color-primary-dark, 0.8)
 		),
-		url("../img/nat-4.jpg");
+		url("../img/webp/nat-4-small.webp");
 	background-size: cover;
 	transform: skewY(-7deg);
 
@@ -30,6 +30,15 @@
 
 	@include respond(tab-port) {
 		padding: 10rem 0;
+	}
+
+	@media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+		background-image: linear-gradient(
+				to right bottom,
+				rgba($color-primary-light, 0.8),
+				rgba($color-primary-dark, 0.8)
+			),
+			url("../img/webp/nat-4.webp");
 	}
 }
 
@@ -82,7 +91,7 @@
 			rgba($color-white, 0.9) 50%,
 			transparent 50%
 		),
-		url("../img/nat-10.jpg");
+		url("../img/webp/nat-10-small.webp");
 	background-size: 100%;
 	background-repeat: no-repeat;
 
@@ -110,7 +119,7 @@
 				rgba($color-white, 0.9) 70%,
 				transparent 65%
 			),
-			url("../img/nat-10.jpg");
+			url("../img/webp/nat-10-small.webp");
 		background-size: cover;
 	}
 
@@ -120,6 +129,15 @@
 				rgba($color-white, 0.9) 0%,
 				rgba($color-white, 0.9) 100%
 			),
-			url("../img/nat-10.jpg");
+			url("../img/webp/nat-10-small.webp");
+	}
+
+	@media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+		background-image: linear-gradient(
+				to right,
+				rgba($color-white, 0.9) 0%,
+				rgba($color-white, 0.9) 100%
+			),
+			url("../img/webp/nat-10.webp");
 	}
 }
