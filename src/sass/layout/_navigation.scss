@@ -143,18 +143,18 @@
 	}
 
 	&__checkbox:checked + &__button &__icon::before {
-		transform: rotate(135deg) translate(5px, -5px);
+		transform: rotate(135deg) translate(0.7rem, -0.6rem);
 
 		@include respond(tab-port) {
-			transform: rotate(135deg) translate(5px, -4px);
+			transform: rotate(135deg) translate(0.7rem, -0.6rem);
 		}
 	}
 
 	&__checkbox:checked + &__button &__icon::after {
-		transform: rotate(-135deg) translate(7px, 7px);
+		transform: rotate(-135deg) translate(0.7rem, 0.7rem);
 
 		@include respond(tab-port) {
-			transform: rotate(-135deg) translate(6px, 6px);
+			transform: rotate(-135deg) translate(0.7rem, 0.6rem);
 		}
 	}
 }

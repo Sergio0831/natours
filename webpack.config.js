@@ -51,6 +51,7 @@ module.exports = {
 	output: {
 		filename: production ? "[name].[contenthash].js" : "[name].js",
 		path: path.resolve(__dirname, "dist"),
+		assetModuleFilename: "fonts/[hash][ext][query]",
 	},
 
 	module: {
@@ -82,10 +83,10 @@ module.exports = {
 					},
 				],
 			},
-			// {
-			// 	test: /\.(png|jpe?g|gif|svg)$/i,
-			// 	type: 'asset',
-			// },
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/i,
+				type: "asset/resource",
+			},
 			{
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
