@@ -65,10 +65,15 @@
 		}
 	}
 
+	[class^="col-"] {
+		&:not(:last-child) {
+			margin-bottom: $gutter-horizontal;
+		}
+	}
+
 	@include respond(tab-port) {
 		flex-direction: column;
 		padding: 0 3rem;
 		max-width: 50rem;
-		row-gap: 6rem;
 	}
 }

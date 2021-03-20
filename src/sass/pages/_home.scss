@@ -10,6 +10,10 @@
 		padding-top: 30rem;
 		padding-bottom: 20rem;
 	}
+
+	@include respond(phone) {
+		padding-top: 20rem;
+	}
 }
 
 .section-features {
