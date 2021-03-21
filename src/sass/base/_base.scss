@@ -29,12 +29,7 @@ html {
 }
 
 body {
-	padding: 3rem;
 	box-sizing: border-box;
-
-	@include respond(tab-port) {
-		padding: 0;
-	}
 }
 
 body.lock {
@@ -53,4 +48,12 @@ a {
 ::selection {
 	color: $color-white;
 	background-color: $color-primary;
+}
+
+.wrapper {
+	padding: 3rem;
+
+	@include respond(tab-port) {
+		padding: 0;
+	}
 }

@@ -1,10 +1,20 @@
 // Smooth scroll
 export const smoothScroll = () => {
 	const menuLinks = document.querySelectorAll(".navigation__link[data-goto]");
+	const body = document.querySelector("body");
+
 	if (menuLinks.length > 0) {
 		menuLinks.forEach((menuLink) => {
 			menuLink.addEventListener("click", onMenuLinkClick);
 		});
+
+		// Hide scroll when nav menu is open
+		// const navigation = document.querySelector(".navigation");
+		// navigation.addEventListener("click", (e) => {
+		// 	if (e.target.id === "navi-toggle") {
+		// 		body.classList.toggle("lock");
+		// 	}
+		// });
 
 		function onMenuLinkClick(e) {
 			e.preventDefault();
@@ -31,7 +41,7 @@ export const smoothScroll = () => {
 			// Remove nav
 			const checkbox = document.getElementById("navi-toggle");
 			if (checkbox.checked === true) {
-				document.body.classList.remove("lock");
+				body.classList.remove("lock");
 				checkbox.checked = false;
 			}
 		}
@@ -51,7 +61,7 @@ export const smoothScroll = () => {
 		const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
 
 		window.scrollTo({
-			top: gotoBlockValue + 150,
+			top: gotoBlockValue + 120,
 			behavior: "smooth",
 		});
 	}
