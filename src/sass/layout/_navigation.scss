@@ -54,6 +54,7 @@
 		top: 0;
 		z-index: -1500;
 		display: grid;
+		overflow: auto;
 		width: 0;
 		height: 100vh;
 		opacity: 0;
@@ -94,6 +95,12 @@
 
 		&:hover,
 		&:active {
+			color: $color-primary;
+			background-position: 100%;
+			transform: translateX(1rem);
+		}
+
+		&.active {
 			color: $color-primary;
 			background-position: 100%;
 			transform: translateX(1rem);

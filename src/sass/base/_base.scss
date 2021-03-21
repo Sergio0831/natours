@@ -37,6 +37,10 @@ body {
 	}
 }
 
+body.lock {
+	overflow: hidden;
+}
+
 li {
 	list-style: none;
 }
