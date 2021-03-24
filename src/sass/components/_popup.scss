@@ -35,8 +35,7 @@
 	&__content {
 		@include box-shadow(0, 2rem, 4rem, rgba($color-black, 0.2));
 
-		display: grid;
-		grid-template-columns: 1fr 2fr;
+		display: flex;
 		margin: auto;
 		border-radius: $rounded;
 		width: 75%;
@@ -47,30 +46,25 @@
 
 		@include respond(tab-port) {
 			position: relative;
-			grid-template-columns: 1fr;
-			grid-template-rows: 1fr 1fr;
-		}
-
-		@include respond(phone) {
-			grid-template-rows: 1fr 2fr;
+			flex-direction: column;
 		}
 	}
 
 	&__left {
-		display: grid;
-		grid-template-rows: 1fr 1fr;
+		flex-basis: 33%;
 
 		@include respond(tab-port) {
-			grid-template-columns: 1fr 1fr;
+			display: flex;
 		}
 
 		@include respond(phone) {
-			grid-template-columns: 1fr;
+			flex-direction: column;
 		}
 	}
 
 	&__right {
 		position: relative;
+		flex: 1;
 		align-self: center;
 		padding: 3rem 5rem;
 
@@ -90,11 +84,13 @@
 		object-fit: cover;
 
 		@include respond(tab-port) {
-			height: 100%;
+			width: 50%;
+			height: 50%;
 			object-fit: cover;
 		}
 
 		@include respond(phone) {
+			width: 100%;
 			height: 50%;
 			object-fit: cover;
 		}
